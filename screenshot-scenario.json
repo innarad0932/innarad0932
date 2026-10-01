@@ -1,0 +1,51 @@
+{
+  "notes": "tapFrac = normalised SCREEN coords, y measured from the TOP. Every tap here is UI, so each one is computed from the real RectTransform over the 1242x2688 reference canvas and then corrected for the AspectRatioFitter on AspecterSA (FitInParent, ratio 0.46205357, present on BOTH the main canvas and the pops canvas): on the 1080x2400 device the UI layer is 1080x2337.4, letterboxed 31.3px top and bottom, so a panel fraction u sits at 0.013042 + u*0.973917 of the screen measured from the bottom, while x needs no correction because the layer is full width. The drive taps land on RUN_HUD/DRIVE_ZONE, the full-panel hit area that sits UNDER the HUD chrome, so they cannot steal the Back or Pause button. A short tap is the metered boost: exactly one section up, no beam contact, 0.55s of travel plus a 0.35s cooldown, so 1.5s between steps always lands. The run itself cannot end during this scenario - a passive climb survives 80s and these eight steps take about 25s.",
+  "steps": [
+    {
+      "wait": 3,
+      "shot": "01_Menu"
+    },
+    {
+      "tapFrac": [0.5, 0.734],
+      "label": "PLAY",
+      "waitLoader": true,
+      "shot": "02_ShaftStart"
+    },
+    {
+      "tapFrac": [0.5, 0.539],
+      "label": "BOOST_SECTION_1",
+      "wait": 1.5,
+      "shot": "03_Climb_1"
+    },
+    {
+      "tapFrac": [0.5, 0.539],
+      "label": "BOOST_SECTION_2",
+      "wait": 1.5,
+      "shot": "04_Climb_2"
+    },
+    {
+      "tapFrac": [0.5, 0.539],
+      "label": "BOOST_SECTION_3",
+      "wait": 1.5,
+      "shot": "05_BeamsSweeping"
+    },
+    {
+      "tapFrac": [0.5, 0.539],
+      "label": "BOOST_SECTION_4",
+      "wait": 1.5,
+      "shot": "06_Climb_4"
+    },
+    {
+      "tapFrac": [0.911, 0.067],
+      "label": "PAUSE",
+      "wait": 2.5,
+      "shot": "07_HoldPosition"
+    },
+    {
+      "tapFrac": [0.5, 0.603],
+      "label": "RESUME",
+      "wait": 4,
+      "shot": "08_RunContinues"
+    }
+  ]
+}

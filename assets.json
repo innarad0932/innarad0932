@@ -1,0 +1,135 @@
+{
+  "style": "cel-shaded toon game art, thick dark outline, neon rim-light glow on cool blue and violet, flat bold shading",
+  "palette": [
+    "#10162C",
+    "#0A0E1E",
+    "#182142",
+    "#2D7CFF",
+    "#6FB0FF",
+    "#8B45D3",
+    "#F2C44F",
+    "#F04B63",
+    "#F5F7FF"
+  ],
+  "notes": "One art style repeated inside every prompt. Orientation is declared in words for every mechanical sprite (rule C.8): the container, beacon, spark, mark, hull pip and the three icons are symmetric front views, so code never mirrors them; the wall ledge is the only asymmetric piece and is drawn as a LEFT-wall bracket, which the game flips for the right wall. Nine-sliced pieces (beam, wall panel, decay band, guide ray) are drawn as plain bars with uniform ends so the slice borders in their .meta have flat material to stretch. Sprites are drawn over whatever backdrop the model picks and matted out by the pipeline, so no prompt argues about background colour. There is no coin, prize or currency art anywhere: the only metrics this game shows are sections and height.",
+  "assets": [
+    {
+      "name": "bg_main",
+      "type": "bg",
+      "transparent": false,
+      "target": "Assets/Art/Textures/_BASE/Backgrounds/BG_main.png",
+      "prompt": "cel-shaded toon game art, thick dark outline, neon rim-light glow on cool blue and violet, flat bold shading, looking straight up a narrow vertical tech tower shaft, dark steel walls converging toward a small warm golden light far above, cold blue edge lighting down both walls, deep navy blackness, the centre band kept calm and uncluttered as a safe area for menu panels, top and bottom edges darkened, vertical 9:16 portrait composition, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "bg_game",
+      "type": "bg",
+      "transparent": false,
+      "target": "Assets/Art/Textures/_BASE/Backgrounds/BG_game.png",
+      "prompt": "cel-shaded toon game art, thick dark outline, neon rim-light glow on cool blue and violet, flat bold shading, the inside of a tall industrial tower shaft, dim blue service lighting and faint cable runs, deliberately low contrast and muted so gameplay reads on top of it, an empty uncluttered vertical corridor down the centre of the frame, the upper third darkened so a HUD stays readable, vertical 9:16 portrait composition, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_container",
+      "type": "sprite",
+      "transparent": true,
+      "orientation": "front view, upright, top UP, horizontally symmetric, no mirroring",
+      "target": "Assets/Art/Sprites/sprite_container.png",
+      "prompt": "cel-shaded toon game art, thick dark outline, neon rim-light glow on cool blue and violet, flat bold shading, one single hexagonal energy cargo container, upright, front view, glowing blue core panel set into a heavy dark metal frame, crisp silhouette, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_bracket",
+      "type": "sprite",
+      "transparent": true,
+      "orientation": "square, side view, mounted on the LEFT wall with the arm reaching RIGHT, the game flips it for the right wall",
+      "target": "Assets/Art/Sprites/sprite_bracket.png",
+      "prompt": "cel-shaded toon game art, thick dark outline, neon rim-light glow on cool blue and violet, flat bold shading, one single wall-mounted metal clamp ledge seen from the side, bolted to the left edge of the frame with a flat gripping arm reaching right, glowing blue strip along the top of the arm, chunky and square in overall silhouette, filling most of the frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_beam",
+      "type": "sprite",
+      "transparent": true,
+      "orientation": "horizontal bar, symmetric left to right, FILLS THE WHOLE SQUARE FRAME so the nine-slice has solid material to stretch",
+      "target": "Assets/Art/Sprites/sprite_beam.png",
+      "prompt": "cel-shaded toon game art, thick dark outline, neon rim-light glow on cool blue and violet, flat bold shading, one single horizontal energy barrier that FILLS THE ENTIRE SQUARE FRAME edge to edge and top to bottom, hot red and white glowing core running the full width with dark metal rails along the top and bottom edges, no empty margin anywhere, symmetric, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_wall_panel",
+      "type": "sprite",
+      "transparent": true,
+      "orientation": "vertical panel, symmetric, FILLS THE WHOLE SQUARE FRAME edge to edge, tileable top to bottom",
+      "target": "Assets/Art/Sprites/sprite_wall_panel.png",
+      "prompt": "cel-shaded toon game art, thick dark outline, neon rim-light glow on cool blue and violet, flat bold shading, one single armour wall panel that FILLS THE ENTIRE SQUARE FRAME edge to edge and top to bottom, dark steel plating with vertical rivet rows and a thin glowing blue seam down the left edge, no empty margin anywhere, flat and repeating, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_tide_band",
+      "type": "sprite",
+      "transparent": true,
+      "orientation": "horizontal band, symmetric left to right, FILLS THE WHOLE SQUARE FRAME, the eaten crest along the TOP edge",
+      "target": "Assets/Art/Sprites/sprite_tide_band.png",
+      "prompt": "cel-shaded toon game art, thick dark outline, neon rim-light glow on cool blue and violet, flat bold shading, one single mass of rising violet and red decay energy that FILLS THE ENTIRE SQUARE FRAME edge to edge, a ragged glowing crest right along the top edge and dense dark churning energy filling everything below it, no empty margin anywhere, symmetric left to right, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_beacon",
+      "type": "sprite",
+      "transparent": true,
+      "orientation": "front view, top UP, symmetric",
+      "target": "Assets/Art/Sprites/sprite_beacon.png",
+      "prompt": "cel-shaded toon game art, thick dark outline, neon rim-light glow, flat bold shading, one single tower beacon lamp, a faceted golden lens in a dark metal cage throwing a warm halo, front view, upright, symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_spark",
+      "type": "sprite",
+      "transparent": true,
+      "orientation": "radial, symmetric in every direction",
+      "target": "Assets/Art/Sprites/sprite_spark.png",
+      "prompt": "cel-shaded toon game art, thick dark outline, neon rim-light glow, flat bold shading, one single radial impact flash, a bright hot centre with short straight rays going out evenly all around, perfectly radial and symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_mark",
+      "type": "sprite",
+      "transparent": true,
+      "orientation": "front view, symmetric, no letters of any kind",
+      "target": "Assets/Art/Sprites/sprite_mark.png",
+      "prompt": "cel-shaded toon game art, thick dark outline, neon rim-light glow on cool blue and violet, flat bold shading, one single abstract emblem, a hollow hexagon outline with a simple chevron pointing up inside it, glowing blue rim and a violet inner glow, purely geometric, front view, symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no numbers, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_hull_pip",
+      "type": "sprite",
+      "transparent": true,
+      "orientation": "front view, symmetric",
+      "target": "Assets/Art/Sprites/sprite_hull_pip.png",
+      "prompt": "cel-shaded toon game art, thick dark outline, neon rim-light glow on cool blue, flat bold shading, one single small hexagonal armour cell indicator, a solid glowing core inside a thick dark hexagon border, front view, symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_guide",
+      "type": "sprite",
+      "transparent": true,
+      "orientation": "vertical ray, symmetric left to right, FILLS THE WHOLE SQUARE FRAME top to bottom",
+      "target": "Assets/Art/Sprites/sprite_guide.png",
+      "prompt": "cel-shaded toon game art, thick dark outline, neon rim-light glow on cool blue and violet, flat bold shading, one single vertical guide ray of blue light that FILLS THE ENTIRE SQUARE FRAME from top edge to bottom edge, brightest along its middle and softly faded toward the left and right edges, uniform along its whole length, no empty margin at the top or bottom, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_icon_pause",
+      "type": "sprite",
+      "transparent": true,
+      "orientation": "front view, symmetric",
+      "target": "Assets/Art/Sprites/sprite_icon_pause.png",
+      "prompt": "cel-shaded toon game art, thick dark outline, flat bold shading, one single pause glyph made of two identical thick upright rounded bars side by side, solid pale blue-white, front view, symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_icon_back",
+      "type": "sprite",
+      "transparent": true,
+      "orientation": "arrow pointing LEFT",
+      "target": "Assets/Art/Sprites/sprite_icon_back.png",
+      "prompt": "cel-shaded toon game art, thick dark outline, flat bold shading, one single thick chevron arrow glyph pointing to the left, solid pale blue-white, rounded ends, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_icon_close",
+      "type": "sprite",
+      "transparent": true,
+      "orientation": "front view, symmetric",
+      "target": "Assets/Art/Sprites/sprite_icon_close.png",
+      "prompt": "cel-shaded toon game art, thick dark outline, flat bold shading, one single close glyph, two thick rounded bars crossing at the centre in an X, solid pale blue-white, front view, symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    }
+  ]
+}
